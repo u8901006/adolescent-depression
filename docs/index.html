@@ -17,7 +17,13 @@
   li { margin-bottom: 8px; }
   a { color: var(--text); text-decoration: none; display: block; padding: 14px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: all 0.2s; font-size: 15px; }
   a:hover { background: var(--accent-soft); border-color: var(--accent); transform: translateX(4px); }
-  footer { margin-top: 56px; text-align: center; font-size: 12px; color: var(--muted); }
+  .footer-links { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; }
+  .footer-link { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .footer-link:hover { background: var(--accent-soft); border-color: var(--accent); }
+  .footer-icon { font-size: 24px; flex-shrink: 0; }
+  .footer-name { font-size: 14px; font-weight: 600; flex: 1; }
+  .footer-arrow { font-size: 16px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 40px; text-align: center; font-size: 12px; color: var(--muted); }
   footer a { display: inline; padding: 0; background: none; border: none; color: var(--muted); }
   footer a:hover { color: var(--accent); }
 </style>
@@ -27,7 +33,27 @@
   <div class="logo">💙</div>
   <h1>Adolescent Depression</h1>
   <p class="subtitle">青少年憂鬱症文獻日報 · 每日自動更新</p>
-  <p class="count">即將開始更新...</p>
+  <p class="count">共 1 期日報</p>
+  <ul>
+    <li><a href="report-2026-05-14.html">📅 2026年5月14日（週五）</a></li>
+  </ul>
+  <div class="footer-links">
+    <a href="https://www.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">🏥</span>
+      <span class="footer-name">李政洋身心診所首頁</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">📰</span>
+      <span class="footer-name">訂閱電子報</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://buymeacoffee.com/CYlee" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">☕</span>
+      <span class="footer-name">Buy me a coffee</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+  </div>
   <footer>
     <p>Powered by PubMed + Zhipu AI · <a href="https://github.com/u8901006/adolescent-depression">GitHub</a></p>
   </footer>
