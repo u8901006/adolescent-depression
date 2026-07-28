@@ -97,7 +97,7 @@ function main() {
     </a>
   </div>
   <footer>
-    <p>Powered by PubMed + Zhipu AI · <a href="https://github.com/u8901006/adolescent-depression">GitHub</a></p>
+    <p>Powered by PubMed + NVIDIA AI · <a href="https://github.com/u8901006/adolescent-depression">GitHub</a></p>
   </footer>
 </div>
 </body>

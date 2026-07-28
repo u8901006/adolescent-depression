@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Generate adolescent depression daily report HTML using Zhipu AI.
- * Reads papers JSON, analyzes with AI (GLM-5-Turbo with fallback chain),
+ * Generate adolescent depression daily report HTML using NVIDIA AI.
+ * Reads papers JSON, analyzes with NVIDIA Nemotron 3 Super with a Nano fallback,
  * generates styled HTML matching the Psychiatry-brain design.
  */
 
@@ -12,9 +12,9 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
-const API_BASE = process.env.ZHIPU_API_BASE || "https://open.bigmodel.cn/api/coding/paas/v4";
-const MODELS = ["glm-5-turbo", "glm-4.7", "glm-4.7-flash"];
-const MAX_TOKENS = 50000;
+const API_BASE = "https://integrate.api.nvidia.com/v1";
+const MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-nano-30b-a3b"];
+const MAX_TOKENS = 16384;
 const TIMEOUT_MS = 480_000;
 const MAX_RETRIES = 3;
 
@@ -145,9 +145,11 @@ ${papersText}
               { role: "system", content: SYSTEM_PROMPT },
               { role: "user", content: prompt },
             ],
-            temperature: 0.3,
-            top_p: 0.9,
+            temperature: 1.0,
+            top_p: 0.95,
             max_tokens: MAX_TOKENS,
+            stream: false,
+            chat_template_kwargs: { enable_thinking: false },
           }),
           signal: AbortSignal.timeout(TIMEOUT_MS),
         });
@@ -355,7 +357,7 @@ function generateHtml(analysis) {
       <div class="header-meta">
         <span class="badge badge-date">\uD83D\uDCC5 ${dateDisplay}</span>
         <span class="badge badge-count">\uD83D\uDCCA ${total} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -392,7 +394,7 @@ function generateHtml(analysis) {
   </div>
 
   <footer>
-    <span>資料來源：PubMed &middot; 分析模型：Zhipu AI</span>
+    <span>資料來源：PubMed &middot; 分析模型：NVIDIA Nemotron</span>
     <span><a href="https://github.com/u8901006/adolescent-depression">GitHub</a></span>
   </footer>
 </div>
@@ -412,9 +414,9 @@ function parseArgs() {
 
 async function main() {
   const opts = parseArgs();
-  const apiKey = process.env.ZHIPU_API_KEY || "";
+  const apiKey = process.env.NVIDIA_API_KEY || "";
   if (!apiKey) {
-    console.error("[ERROR] No API key. Set ZHIPU_API_KEY env var.");
+    console.error("[ERROR] No API key. Set NVIDIA_API_KEY env var.");
     process.exit(1);
   }
 
