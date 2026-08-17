@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adolescent Depression &middot; 青少年憂鬱症文獻日報 &middot; 2026年8月17日</title>
+<meta name="description" content="2026年8月17日 青少年憂鬱症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .footer-links { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; display: flex; flex-direction: column; gap: 12px; }
+  .footer-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .footer-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .footer-icon { font-size: 28px; flex-shrink: 0; }
+  .footer-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .footer-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">💙</div>
+    <div class="header-text">
+      <h1>Adolescent Depression &middot; 青少年憂鬱症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月17日</span>
+        <span class="badge badge-count">📊 17 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦青少年憂鬱症的多維度影響因子，突顯睡眠問題、學業壓力、創傷經驗與數位介入在預防與治療中的關鍵角色，尤其強調跨文化適應性與早期篩檢的重要性。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🌐</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Transdiagnostic Brief Behavioral Therapy on Suicide Reduction for Depressed Hispanic/Latine Youth</h3>
+          <p class="journal-source">Archives of suicide research : official journal of the International Academy for Suicide Research &middot; Impact of Transdiagnostic Brief Behavioral Therapy on Suicide Reduction for Depressed Hispanic/Latine Youth</p>
+          <p>在抑鬱的西班牙裔/拉丁裔青少年中，跨診斷行為療法顯著降低自殺傾向，證明文化敏感的心理介入可有效緩解高風險族群的自殺風險。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">抑鬱的西班牙裔/拉丁裔青少年 (年齡 8.0–16.9 歲)</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">簡短行為療法 (BBT)</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">社區照護轉介 (ARC)</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">週 16 時自殺傾向顯著降低</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">憂鬱症治療</span><span class="tag">自殺防治</span><span class="tag">文化與少數族群</span><span class="tag">認知行為治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">📚</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Academic Adversity and Adolescent Mental Health in Wales: A Population-Based Linked Data Study</h3>
+          <p class="journal-source">BMJ open &middot; Does intervening to improve early academic adversity impact later mental health during adolescence? A population-based linked data modelling study in Wales.</p>
+          <p>年六學業逆境顯著預測青春期焦慮與憂鬱，減輕學業壓力可降低精神疾病風險，凸�早期校園介入的預防價值。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">威爾斯出生於 2000–2022 年的兒童與青少年</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Sure Start 和全民免費校內餐飲結合介入</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無介入對照組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">13–18 歲首次診斷焦慮或憂鬱之風險降低</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">校園心理健康</span><span class="tag">家庭因素</span><span class="tag">公共衛生</span><span class="tag">憂鬱症治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">😴</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Restless-Leg Syndrome and Mental Health in Adolescents: Sleep, Mood, and Academic Impact</h3>
+          <p class="journal-source">Behavioral sleep medicine &middot; Restless-Leg Syndrome Among Adolescents: Impact on Sleep Quality, Mood, and Academic Performance.</p>
+          <p>近三成青少年罹患不安腿症候群，顯著關聯較差睡眠、增加焦慮憂鬱與學業表現下降，提醒睡眠障礙需納入憂鬱評估。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">10–19 歲在學青少年 (n=2,289)</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷式觀察）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無 RLS 對照組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">RLS 與較差睡眠、白天嗜睡、憂鬱焦慮壓力增加及學業成績降低相關</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">睡眠與憂鬱</span><span class="tag">青少年憂鬱症</span><span class="tag">神經科學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🌙</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Bedtime Procrastination and Sleep Disturbance Trajectories Predict Adolescent Anxiety and Depression</h3>
+          <p class="journal-source">Sleep medicine &middot; Co-developmental trajectories of bedtime procrastination and sleep disturbance in adolescents: Predictors and mental health implications.</p>
+          <p>青少年中存在兩種睡眠行為發展軌跡：低風險穩定組與升高風險組，後者由不確定性 intolerance 與晚型節律預測，並顯著關聯未來焦慮憂鬱症狀加重。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">中國青少年 (n=1054，平均年齡 14.22 歲)</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（三波長期追蹤觀察）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">穩定低風險組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">升高風險組伴隨焦慮與憂鬱症狀顯著增加</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">睡眠與憂鬱</span><span class="tag">認知行為治療</span><span class="tag">校園心理健康</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📱</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Internet Addiction and Mental Health Help-Seeking in Chinese Adolescents: Low Formal Care Utilization</h3>
+          <p class="journal-source">Journal of medical Internet research &middot; Internet Addiction, Mental Health Help-Seeking, and Mental Health Problems Among Chinese Adolescents: Repeated Cross-Sectional Study.</p>
+          <p>中國青少年網路成癮率低 (1.4%)，但其中只有 6.3% 尋求正式心理健康協助，顯露服務落差與介入需求。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">中國山東省初中生 (n=171,970)</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無網路成癮者</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">網路成癮青少年較少尋求非正式 (OR=0.69) 與正式 (OR=0.54) 心理健alth-seeking</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">數位介入</span><span class="tag">篩檢評估</span><span class="tag">文化與少數族群</span><span class="tag">青少年憂鬱症</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Antipsychotic Medication and Psychiatric Emergencies in Difficult-to-Treat Adolescent Depression</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>在難治性青少年憂鬱中， atypical 抗精神病藥物相較於次級抗憂鬱藥物，增加精神科急訪風險，不支持其預防性使用。</p>
+          <div class="card-footer">
+            <span class="tag">藥物治療</span><span class="tag">自殺防治</span><span class="tag">青少年憂鬱症</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Stroke, Depression, and Suicidal Ideation: NHANES Analysis Reveals Increased Risk</h3>
+          <p class="journal-source">Clinical neurology and neurosurgery</p>
+          <p>中風病史在伴隨憂鬱時顯著增加自殺念頭風險 (AOR=1.86)，提醒神經科與精神科協同篩檢自殺風險。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">公共衛生</span><span class="tag">神經科學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📋</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Validation of Korean CES-DC for Depression Screening in Children and Adolescents</h3>
+          <p class="journal-source">Psychiatry investigation</p>
+          <p>韓國版兒童憂鬱篩檢工具 (CES-DC) 表現良好內部一致性與再測信度，支持其在青少年憂鬱篩檢中的應用。</p>
+          <div class="card-footer">
+            <span class="tag">篩檢評估</span><span class="tag">青少年憂鬱症</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💖</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Hope and Self-Compassion as Protective Factors Against Anxiety and Depression in College Students</h3>
+          <p class="journal-source">The Journal of psychology</p>
+          <p>自慈悲與希望相互促進並預測後續降低焦慮憂鬱，支持將此二者納入大學生心理健康介入作為保護性因子。</p>
+          <div class="card-footer">
+            <span class="tag">認知行為治療</span><span class="tag">憂鬱症治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚖️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Effort-Based Decision-Making in Adolescent Girls with Depression: Apathy as Key Factor</h3>
+          <p class="journal-source">The British journal of clinical psychology</p>
+          <p>青少年女孩憂鬱中，努力決策受損主要與夥伴症狀相關，而非快感缺失，提示療法應聚焦動機復建而非愉悅感恢復。</p>
+          <div class="card-footer">
+            <span class="tag">神經科學</span><span class="tag">藥物治療</span><span class="tag">認知行為治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🥽</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>VR-Based Mindfulness Intervention Improves ADHD and Psychosocial Outcomes in College Students</h3>
+          <p class="journal-source">Digital health</p>
+          <p>VR 正念介入顯著改善大學生 ADHD 症狀與相關憂鬱焦慮，但需注意暈眩副作用，顯示數位治療的潛力與挑戰。</p>
+          <div class="card-footer">
+            <span class="tag">數位介入</span><span class="tag">認知行為治療</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Self-Blame and Catastrophising Linked to Poor Sleep and Mental Health in Young Adults</h3>
+          <p class="journal-source">Journal of health psychology</p>
+          <p>自我責備與災難化思維顯著關聯較差主觀睡眠品質與增加憂鬱焦慮，認知情緒調節策略是改善睡眠與心健的潛在靶點。</p>
+          <div class="card-footer">
+            <span class="tag">認知行為治療</span><span class="tag">睡眠與憂鬱</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏥</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Anxiety in Medical Students: Associated Factors Include Sleep Distress and Irritability</h3>
+          <p class="journal-source">Academic psychiatry : the journal of the American Association of Directors of Psychiatric Residency Training and the Association for Academic Psychiatry</p>
+          <p>一年級醫學生焦慮與睡眠減少、感覺過度工作及易怒顯著相關，提醒需早期介入醫學生心理健康。</p>
+          <div class="card-footer">
+            <span class="tag">校園心理健康</span><span class="tag">睡眠與憂鬱</span><span class="tag">家庭因素</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Off-Label Psychotropic Use in Children and Adolescents: Scoping Review Identifies Key Drivers</h3>
+          <p class="journal-source">The Australian and New Zealand journal of psychiatry</p>
+          <p>兒童青少年精神藥物離標使用廣泛，主要由診斷（如多動）、患者與藥物因素驅動，凸顯需加強規範與醫師教育。</p>
+          <div class="card-footer">
+            <span class="tag">藥物治療</span><span class="tag">公共衛生</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Trauma Exposure Worsens Mental Health in Adolescents with ADHD</h3>
+          <p class="journal-source">European journal of psychotraumatology</p>
+          <p>ADHD 青少年更易受創傷影響，創傷暴露顯著關聯較強烈的創傷反應、憂鬱症狀與自尊降低，但 ADHD 不調節此關聯。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與壓力</span><span class="tag">青少年憂鬱症</span><span class="tag">家庭因素</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏥</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Improving Screening for Adolescent Substance Use and Mental Health in Primary Care</h3>
+          <p class="journal-source">American journal of medical quality : the official journal of the American College of Medical Quality</p>
+          <p>質量改進合作顯著提升初級保健中青少年物質使用、憂鬱、焦慮與自殺風險的篩檢率，支持系統層面介入的有效性。</p>
+          <div class="card-footer">
+            <span class="tag">篩檢評估</span><span class="tag">公共衛生</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📱</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Social vs Non-Social Screen Time and Its Differential Impact on Anxiety, Depression, and Insomnia</h3>
+          <p class="journal-source">Psychological reports</p>
+          <p>社交螢幕時間調節焦慮與失眠關係，而非社交螢幕時間與憂鬱相關，提示需分類評估螢幕使用對心健的不同影響。</p>
+          <div class="card-footer">
+            <span class="tag">社會媒體影響</span><span class="tag">睡眠與憂鬱</span><span class="tag">認知行為治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">憂鬱症治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">6</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自殺防治</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠與憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:83%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">校園心理健康</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">認知行為治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:83%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">數位介入</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">文化與少數族群</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷與壓力</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">篩檢評估</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">藥物治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+              <span class="topic-count">4</span>
+            </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">青少年憂鬱症</span><span class="keyword">自殺防治</span><span class="keyword">數位介入</span><span class="keyword">睡眠與憂鬱</span><span class="keyword">校園心理健康</span></div></div>
+
+  <div class="footer-links">
+    <a href="https://www.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">🏥</span>
+      <span class="footer-name">李政洋身心診所首頁</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">📰</span>
+      <span class="footer-name">訂閱電子報</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://buymeacoffee.com/CYlee" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">☕</span>
+      <span class="footer-name">Buy me a coffee</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：NVIDIA Nemotron</span>
+    <span><a href="https://github.com/u8901006/adolescent-depression">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
