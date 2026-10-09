@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adolescent Depression &middot; 青少年憂鬱症文獻日報 &middot; 2026年10月10日</title>
+<meta name="description" content="2026年10月10日 青少年憂鬱症文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .footer-links { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; display: flex; flex-direction: column; gap: 12px; }
+  .footer-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .footer-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .footer-icon { font-size: 28px; flex-shrink: 0; }
+  .footer-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .footer-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">💙</div>
+    <div class="header-text">
+      <h1>Adolescent Depression &middot; 青少年憂鬱症文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年10月10日</span>
+        <span class="badge badge-count">📊 13 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於青少年憂鬱症的數位介入、神經生物機制與社會心理因素交互作用，其中以基於應用的正念認知療法、慢性壓力與創傷對抑鬱復發的影響，以及社交媒體與心理健康之弱關聯性為主要亮點，顯示預防與早期干預的整合趨勢日益受重視。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>應用支援正念認知療法對泰國具有非自殺性自傷行為青少年憂鬱症之影響：隨機對照試驗</h3>
+          <p class="journal-source">The British journal of clinical psychology &middot; The effect of an integrated application-supported mindfulness-based cognitive therapy programme on depression among adolescents with non-suicidal self-injury: A randomized controlled trial.</p>
+          <p>基於應用的正念認知療法顯著減少具有非自殺性自傷行為青少年的憂鬱症狀，證明其在資源有限環境中的臨床實用性與擴散潛力。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">泰國公立中學中具有非自殺性自傷行為且基線憂鬱症狀嚴重度匹配的青少年（每組48人）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">整合學校基礎與應用支援的正念認知療法（MBCT）方案</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">常規照護（usual-care）</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">基線、介入後2週及1個月隨訪時之憂鬱症狀變化，透過重複量測變異數分析評估</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">青少年憂鬱症</span><span class="tag">憂鬱症治療</span><span class="tag">數位介入</span><span class="tag">認知行為治療</span><span class="tag">創傷與壓力</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>童年情感忽視與近期壓力對晚年憂鬱症復發之影響： cohort 研究</h3>
+          <p class="journal-source">Depression and anxiety &middot; Childhood Trauma, Recent Stressors, and Risk of Depression Relapse in Late-Life Depression.</p>
+          <p>童年情感忽視與近期生活壓力共同預測晚年憂鬱症復發，且情感忽視調節壓力對復發的影響，凸顯早期創傷的長期神經生物效應。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">年齡≥65歲且診斷為晚年憂鬱症之老年成人（n=143）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性cohort研究）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無童年情感忽視者 vs. 有童年情感忽視者；低壓力暴露者 vs. 高壓力暴露者</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">Montgomery-Asberg憂鬱評分 Scale (MADRS) ≥15 定義之憂鬱症復發，經 logistic regression 及 Cox 比例風險模型分析</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">創傷與壓力</span><span class="tag">憂鬱症治療</span><span class="tag">神經科學</span><span class="tag">家庭因素</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🤖</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>青少年德pressed disorder 中過去一年非自殺性自傷行為之可解釋機器學習模型開發與內部驗證：回顧性研究</h3>
+          <p class="journal-source">JMIR pediatrics and parenting &middot; Development and Internal Validation of an Interpretable Machine Learning Model for Identifying Past-Year Nonsuicidal Self-Injury Among Adolescents With Depression: Retrospective Study.</p>
+          <p>基於隨機森林的可解釋機器學習模型能以中等識別力辨識過去一年有非自殺性自傷行為的憂鬱青少年，SHAP 分析顯示臨床與生理特徵的貢獻，支援其在風險分層中的潛在臨床用途。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">中國浙江省四家醫院中，年齡10–19歲、就診於精神科門診或住院且具有憂鬱症之青少年（n=410）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無介入（開發預測非自殺性自傷行為的機器學習模型）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無過去一年非自殺性自傷行為 vs. 有過去一年非自殺性自傷行為</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">過去一年是否有非自殺性自傷行為（以自評為準），模型效用以 AUROC (0.681)、AUPRC 及 Brier score 評估</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">篩檢評估</span><span class="tag">數位介入</span><span class="tag">創傷與壓力</span><span class="tag">神經科學</span><span class="tag">憂鬱症治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">📱</span>
+            <span class="utility-low">低實用性</span>
+          </div>
+          <h3>社交媒體使用與青少年焦慮憂鬱之關聯：縱向與實驗研究的系統性評論與meta分析</h3>
+          <p class="journal-source">The British journal of clinical psychology &middot; Social media exposure and anxiety and depression in young people: A systematic review and meta-analysis of longitudinal and experimental studies.</p>
+          <p>縱向與實驗研究顯示社交媒體使用與焦慮憂鬱症狀僅具極弱線性關聯（r≈0.08–0.09），挑戰其為青少年心危主因之假設，提示需關注更複雜的非線性或情境化機制。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">年齡10–24歲之青少年及 youth</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">社交媒體使用（時間/頻率，主要自報）</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低使用量 vs. 高使用量</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">標準化工具測得之焦慮與憂鬱症狀嚴重度</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">社會媒體影響</span><span class="tag">青少年憂鬱症</span><span class="tag">憂鬱症治療</span><span class="tag">篩檢評估</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">⚡</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>青少年慢性壓力大鼠模型中經皮耳廓迷走神經刺激經由 SIRT1/NRF2 通路改善海馬氧化應力與神經炎症，緩解憂鬱與焦慮類行為</h3>
+          <p class="journal-source">Brain research bulletin &middot; Transcutaneous auricular vagus nerve stimulation alleviates depressive- and anxiety-like behaviors in adolescent stressed rats via SIRT1/NRF2-mediated modulation of hippocampal redox and neuroimmune h</p>
+          <p>經皮耳廓迷走神經刺激（taVNS）透過調節海馬 SIRT1/NRF2/GPX4 抗氧化與抗炎通路，顯著改善慢性壓力大鼠模型中之憂鬱與焦慮類行為，提供具機制基礎之非藥物介入選項。</p>
+          <div class="pico-grid">
+  <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">經歷慢不可預見輕度壓力 (CUMS) 模型之青少年期雄性 Sprague-Dawley 大鼠（n=10/組）</span></div>
+  <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">經皮耳廓迷走神經刺激 (taVNS)，每日一次，持續21天</span></div>
+  <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組 (Con)、CUMS 模型組 (Mod)、CUMS+tnVNS 組</span></div>
+  <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">蔗糖偏好測試 (SPT)、開放場測試 (OFT)、升高十字迷宮 (EPM)、海馬組織中 MDA、IL-1β、TNF-α、SIRT1、NRF2、GPX4 表達及神經免疫標誌物</span></div>
+</div>
+          <div class="card-footer">
+            <span class="tag">憂鬱症治療</span><span class="tag">神經科學</span><span class="tag">創傷與壓力</span><span class="tag">神經影像</span><span class="tag">發炎與免疫</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏃</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>青少年運動員在無當前傷病狀況下之焦慮與憂鬱流行率：系統性評論與meta分析</h3>
+          <p class="journal-source">Journal of athletic training</p>
+          <p>青少年運動員中中度至重度憂鬱症狀流行率達18%，顯示此群體精神健康需求被低估，需納入常規篩檢。</p>
+          <div class="card-footer">
+            <span class="tag">青少年憂鬱症</span><span class="tag">校園心理健康</span><span class="tag">篩檢評估</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⌚</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>以生態瞬間評量與介入結合穿戴式數位表型治療年輕人焦慮之混合方法實驗研究</h3>
+          <p class="journal-source">JMIR mHealth and uHealth</p>
+          <p>結合生態瞬間評量/介入與穿戴式數位表型之數位治療顯著改善青年焦慮與憂鬱症狀，支援其個人化與即時回饋之潛力。</p>
+          <div class="card-footer">
+            <span class="tag">憂鬱症治療</span><span class="tag">數位介入</span><span class="tag">穿戴技術</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌙</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>較晚型昼夜節律是否導致青少年心理健康惡化？基於ABCD研究之因果探討</h3>
+          <p class="journal-source">Journal of child psychology and psychiatry, and allied disciplines</p>
+          <p>較晚型昼夜節律與青少年外向化症狀及精神病樣經驗呈微弱正相關，但與內向化症狀（含憂鬱）無關聯，提示其影響路徑可能經由行為而非情感調節。</p>
+          <div class="card-footer">
+            <span class="tag">睡眠與憂鬱</span><span class="tag">青少年憂鬱症</span><span class="tag">神經科學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🛑</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>青少年住院憂鬱症Episode中近期自殺行為之多模態機器學習辨識：臨床、睡眠與自律神經特徵的互補價值</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>結合臨床、睡眠與夜間自律神經特徵之XGBoost模型，較單獨臨床變項顯著提升對近期自殺行為之辨識力（AUC 0.767 vs 0.612），支援其在風險警報中的潛在整合價值。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">數位介入</span><span class="tag">篩檢評估</span><span class="tag">神經科學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">😴</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>24小時行為組成（睡眠、運動、螢幕時間）與中國青少年憂鬱症狀及問題網路使用之關聯：隊列研究</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>睡眠時長與憂鬱症狀及問題網路使用呈非線性關聯，約8.5小時/日為憂鬱症狀之臨界點，低於此閾值時較長睡眠顯著降低風險，支援睡眠衛生在預防中的關鍵作用。</p>
+          <div class="card-footer">
+            <span class="tag">睡眠與憂鬱</span><span class="tag">青少年憂鬱症</span><span class="tag">數位介入</span><span class="tag">篩檢評估</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💉</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>急性氯胺酮 vs. 中 anaestazolam 對青少年最近自殺事件後自殺行為復發之影響：TASK 試驗理論、設計與基線特徵</h3>
+          <p class="journal-source">Contemporary clinical trials</p>
+          <p>TASK試驗設計為雙盲隨機對照試驗，評估靜脈注射氯胺酮是否能降低近期有自殺行為青少年的自殺復發、憂鬱症狀與隱性認知，為抗自殺療法提供關鍵證據。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">憂鬱症治療</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🎥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>青少年自殺念慮中社交接觸影片對求助意圖與治療使用之影響：隨機對照試驗</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>分享個人康復故事之短影片顯著提升求助意圖，且此意圖變化對治療使用具有部分中介作用，在有自殺念慮青少年中效應更強，支援其作為可擴充低門檻介入之潛力。</p>
+          <div class="card-footer">
+            <span class="tag">自殺防治</span><span class="tag">憂鬱症治療</span><span class="tag">數位介入</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>認知彈性在青少年憂鬱症狀與問題智慧手機使用之間的橋樑角色：雙波網路分析</h3>
+          <p class="journal-source">Addictive behaviors</p>
+          <p>認知彈性在憂鬱症狀與問題智慧手機使用之間持續擔任跨社群橋樑角色，顯示其在跨時間與嚴重度層級之穩定關聯性，雖非直接介入目標，但值得作為機制研究與預防模型之納入。</p>
+          <div class="card-footer">
+            <span class="tag">認知行為治療</span><span class="tag">執行功能</span><span class="tag">數位介入</span><span class="tag">青少年憂鬱症</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/[object Object]/" target="_blank" rel="noopener">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">青少年憂鬱症</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">8</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">憂鬱症治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:88%"></div></div>
+              <span class="topic-count">7</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">數位介入</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">6</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷與壓力</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:63%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自殺防治</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠與憂鬱</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:38%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經科學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:38%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">篩檢評估</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:38%"></div></div>
+              <span class="topic-count">3</span>
+            </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">青少年憂鬱症</span><span class="keyword">數位介入</span><span class="keyword">創傷與壓力</span><span class="keyword">自殺防治</span><span class="keyword">睡眠與憂鬱</span><span class="keyword">神經科學</span><span class="keyword">篩檢評估</span></div></div>
+
+  <div class="footer-links">
+    <a href="https://www.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">🏥</span>
+      <span class="footer-name">李政洋身心診所首頁</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">📰</span>
+      <span class="footer-name">訂閱電子報</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+    <a href="https://buymeacoffee.com/CYlee" class="footer-link" target="_blank" rel="noopener">
+      <span class="footer-icon">☕</span>
+      <span class="footer-name">Buy me a coffee</span>
+      <span class="footer-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：NVIDIA Nemotron</span>
+    <span><a href="https://github.com/u8901006/adolescent-depression">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
